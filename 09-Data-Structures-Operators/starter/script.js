@@ -26,4 +26,88 @@ const restaurant = {
       close: 24,
     },
   },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
+//logical assignment operator
+
+const rest1 = {
+  name: 'Capri',
+  numGuests: 20,
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: 'Li Piazzo',
+  owner: 'Giovanni Rossi',
+};
+//OR assignment
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// rest1.numGuests ??= 10;
+// rest2.numGuests ??= 10;
+
+console.log(rest1);
+console.log(rest2);
+
+//SHort circuitin g
+
+// restaurant.numGuests = 23;
+// const guests2 = restaurant.numGuests || 10;
+// console.log(guests2);
+
+// restaurant.numGuests = 23;
+// // const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+
+// // console.log(guest1);
+
+// const guests2 = restaurant.numGuests || 10;
+// console.log(guests2);
+
+// const { name, openingHours, categories } = restaurant;
+
+// console.log(name, openingHours, categories);
+
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+
+// console.log(restaurantName, openingHours, categories);
+
+// const { menu = [], starterMenu: starters = [] } = restaurant;
+
+// console.log(menu, starters);
+
+//////////////////////////////////////////////////
+/*
+const arr = [2, 3, 4];
+
+const [x, y, z] = arr;
+console.log(x, y, z);
+
+let [main, secondary] = restaurant.categories;
+console.log(main, secondary);
+
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
+
+const nested = [2, 4, [5, 6]];
+//const [i, , j] = nested;
+// console.log(i, j);
+
+const [i, , [j, k]] = nested;
+console.log(i, j, k);
+
+const [p = 1, q = 1, r = 1] = [8, 9];
+
+console.log(p, q, r);
+*/
