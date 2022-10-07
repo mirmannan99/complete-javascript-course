@@ -54,8 +54,8 @@ const rest2 = {
 // rest1.numGuests ??= 10;
 // rest2.numGuests ??= 10;
 
-console.log(rest1);
-console.log(rest2);
+// console.log(rest1);
+// console.log(rest2);
 
 //SHort circuitin g
 
@@ -111,3 +111,68 @@ const [p = 1, q = 1, r = 1] = [8, 9];
 
 console.log(p, q, r);
 */
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+let [gk, ...fieldPLayers] = game.players[0];
+
+const allPlayers = [...game.players[0], ...game.players[1]];
+
+const players1Final = [...game.players[0], 'Thiago', 'Coutinho', 'Peristic'];
+
+const { team1, x: draw, team2 } = game.odds;
+
+console.log(gk);
+console.log(fieldPLayers);
+console.log(allPlayers);
+console.log(players1Final);
+console.log(team1, draw, team2);
+
+let printGoals = function (...players) {
+  console.log(players);
+  console.log(`${players.length} number of goals were scored`);
+};
+
+printGoals(...game.scored);
+
+team1 > team2 && console.log('team 1 will win');
+team2 > team1 && console.log('team 2 will win');
