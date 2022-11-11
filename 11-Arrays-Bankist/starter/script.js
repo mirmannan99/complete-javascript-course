@@ -638,6 +638,37 @@ const eurtoUsd = 1.1;
 
 // ? #25 more ways of creating and filling Arrays
 
-const x = new Array(7);
+// //+ Array.fill()
+// // const y = [1, 2, 3, 4, 5, 7];
+// const x = new Array(7); //!specifes the length
 
-console.log(x);
+// console.log(x);
+
+// // x.fill(1); //!fills array with same element
+
+// x.fill(1, 3, 5); //! start and end
+
+// // y.fill(23, 2, 5); //! fills array at specific position(2-5 index)
+// // console.log(y);
+
+// console.log(x);
+
+// //+ Array.from()
+
+// const y = Array.from({ length: 7 }, () => 1);
+
+// const z = Array.from({ length: 7 }, (_, i) => i + 1);
+// console.log(z);
+
+//! this method is used to create arrays from other iterables
+
+// labelBalance.addEventListener('click', function () {
+//   const movementsUi = Array.from(
+//     document.querySelector('.movements__value'),
+//     el => Number(el.textContent.replace('₤', ''))
+//   );
+
+//   console.log(movementsUi);
+// });
+
+//? #28 coding challenge #4
